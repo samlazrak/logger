@@ -1,13 +1,15 @@
+require('dotenv').config()
+const fs = require('fs')
+const util = require('util')
+const readFile = util.promisify(fs.readFile)
 const program = require('commander')
 const express = require('express')
 const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-const fs = require('fs')
-const util = require('util')
-
-const readFile = util.promisify(fs.readFile)
+const database = require('./db')
+const db = new database(process.env.DB_FILEPATH)
 
 /* General functions */
 async function readJson(input) {
