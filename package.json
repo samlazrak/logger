@@ -1,15 +1,15 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "main": "",
+  "name": "json_logger",
+  "version": "1.0",
+  "description": "JSON Logger API",
+  "main": "server.js",
   "scripts": {
-    "test": "node json_manager.js",
-    "server": "nodemon server.js --ignore '*.json'"
+    "start": "pm2 start server.js",
+    "stop": "pm2 stop server.js",
+    "test": "nodemon server.js --ignore '*.json'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "",
+  "author": "Sam Lazrak",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "commander": "^2.19.0",
