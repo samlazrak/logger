@@ -2,7 +2,9 @@
   "name": "json_logger",
   "scripts": {
     "start": "pm2 start server.js",
+    "restart": "sudo kill `sudo lsof -t -i:3000` && pm2 start server.js",
     "stop": "pm2 stop server.js",
+    "kill": "sudo kill `sudo lsof -t -i:3000`",
     "test": "nodemon server.js --ignore '*.json'"
   },
   "dependencies": {
