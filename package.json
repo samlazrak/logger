@@ -5,12 +5,15 @@
   "main": "",
   "scripts": {
     "test": "node json_manager.js",
-    "ctest": "node commandertest.js -i input.json -o output.json"
+    "server": "nodemon server.js --ignore '*.json'"
   },
   "keywords": [],
   "author": "",
   "license": "",
   "dependencies": {
-    "commander": "^2.19.0"
+    "body-parser": "^1.18.3",
+    "commander": "^2.19.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.6"
   }
 }
