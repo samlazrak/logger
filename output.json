@@ -1,6 +1,6 @@
 {
   "health_logs": [
     { "type": "water", "amount": "8oz", "date": "2018-11-08T01:51:23+00:00" },
-    { "type": "water", "amount": "16oz", "date": "2018-11-08T02:00:00+00:00" }
+    { "type": "water", "amount": "32oz", "date": "2018-11-08T02:00:00+00:00" }
   ]
 }

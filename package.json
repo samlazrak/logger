@@ -4,9 +4,13 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "node json_manager.js"
+    "test": "node json_manager.js",
+    "ctest": "node commandertest.js -i input.json -o output.json"
   },
   "keywords": [],
   "author": "",
-  "license": ""
+  "license": "",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
 }
