@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-const database = require('./db')
+const database = require('./objects/db')
 const db = new database(process.env.DB_FILEPATH)
 
 async function readJson(input) {
