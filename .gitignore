@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 *.env
 *.sqlite
+data/health_logs.json
+data/test_output.json

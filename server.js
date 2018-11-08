@@ -11,7 +11,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const database = require('./db')
 const db = new database(process.env.DB_FILEPATH)
 
-/* General functions */
 async function readJson(input) {
   return await readFile(input, 'utf8')
 }
@@ -44,7 +43,6 @@ async function postJson(input, json) {
   })
 }
 
-/* Exoress server & routes */
 const app = express()
 app.get('/', (req, res) => {
   program.command('i <dir>').action((dir) => {
@@ -67,4 +65,6 @@ app.post('/api/log/water', jsonParser, function(req, res) {
   postJson('./data/health_logs.json', json_input)
 })
 
-app.listen(3000, () => console.log(`Listening on 3000!`))
+app.listen(process.env.SERVER_PORT, () =>
+  console.log(`Listening on port: ` + process.env.SERVER_PORT)
+)
