@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "node json_manager.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": ""
+}
