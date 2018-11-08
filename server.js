@@ -23,7 +23,7 @@ async function writeJson(input) {
       date: '2018-11-08T02:00:00+00:00'
     })
     data = JSON.stringify(data)
-    fs.writeFile('output.json', data, function(err) {
+    fs.writeFile('./data/test_output.json', data, function(err) {
       if (err) throw err
       console.log('Written')
     })
@@ -35,7 +35,7 @@ async function postJson(input, json) {
     data = JSON.parse(data)
     data['health_logs'].push(json)
     data = JSON.stringify(data)
-    fs.writeFile('output.json', data, function(err) {
+    fs.writeFile('./data/health_logs.json', data, function(err) {
       if (err) throw err
       console.log('Written')
     })
@@ -62,7 +62,7 @@ app.post('/api/log/water', jsonParser, function(req, res) {
   res.setHeader('Content-Type', 'text/plain')
   res.end(JSON.stringify(req.body, null, 2))
   json_input = req.body
-  postJson('health_logs.json', json_input)
+  postJson('./data/health_logs.json', json_input)
 })
 
 app.listen(3000, () => console.log(`Listening on 3000!`))
